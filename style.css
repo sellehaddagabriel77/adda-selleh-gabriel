@@ -1,37 +1,72 @@
-/* Hero Flex Layout */
-.hero-flex {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 50px;
-    text-align: left; /* Aligns text to the left of the image */
+    align-items: center;
+    color: #ffffff;
 }
 
-.hero-image img {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%; /* Makes the image a circle */
-    object-fit: cover; /* Prevents stretching */
-    border: 8px solid var(--white);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
 }
 
-/* Adjustments for mobile screens */
-  (max-width: 768px) {
-    .hero-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-image img {
-        width: 200px;
-        height: 200px;
-    }
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Refined Header Background */
-header {
-    min-height: 80vh;
-    padding: 60px 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00c6ff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00c6ff;
+}
+
+.school {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.faculty {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.matric {
+    font-size: 14px;
+}
+
+.matric span {
+    color: #00c6ff;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
 }
