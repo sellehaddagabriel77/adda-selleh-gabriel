@@ -1,64 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    min-height: 100vh;
+/* Hero Flex Layout */
+.hero-flex {
     display: flex;
-    flex-direction: column;
-}
-
-.container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    gap: 50px;
+    text-align: left; /* Aligns text to the left of the image */
 }
 
-.card {
-    background: #ffffff;
-    width: 360px;
-    padding: 30px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; /* Makes the image a circle */
+    object-fit: cover; /* Prevents stretching */
+    border: 8px solid var(--white);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #2c5364;
-    margin-bottom: 15px;
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 6px;
-}
-
-.role {
-    color: #555;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.details p {
-    text-align: left;
-    margin: 10px 0;
-    color: #2d3436;
-    font-size: 15px;
-}
-
-footer {
-    text-align: center;
-    color: #ffffff;
-    padding: 10px 0;
-    font-size: 14px;
+/* Refined Header Background */
+header {
+    min-height: 80vh;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
